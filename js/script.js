@@ -14,12 +14,12 @@ server.on('request', function (request, response) {
 		response.end();
 	} else {
 		fs.readFile('./images/404.jpg', function (err, data) {
-			if (err) throw err
 			response.write('<img src="./images/404.jpg" alt="Wrong address!">');
 		})
 		response.end();
 	}
 })
+server.listen(8080);
 /*server.on('request', function (request, response) {
 	response.setHeader("Content-Type", "text/html; charset=utf-8");
 	if (request.method === 'GET' && request.url === '/hello') {
@@ -32,4 +32,3 @@ server.on('request', function (request, response) {
 	};
 })
 */
-server.listen(8080);
