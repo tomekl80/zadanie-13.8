@@ -71,3 +71,6 @@ typings/
 
 # Serverless directories
 .serverless
+# Sublime project
+*.sublime-project
+*.sublime-workspace
